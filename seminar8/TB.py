@@ -41,15 +41,15 @@ def find_contact():
                 print(i)
                 return i
 
-def delete(contacts):
+def delete(path):
     print("Введите контакт: ")
     name = input('> ')
-    for contact in contacts:
+    for contact in path:
         if contact['name'] == name:
             print("Вы хотите удалить контакт %s (yes/no)?: " % name )
             name_del = input('> ')
             if name_del == 'yes':
-               contacts.remove(contact)
+               path.remove(contact)
                print("Вы удалили контакт %s " % name)
             
 
@@ -80,34 +80,3 @@ with open('phonebook.txt', 'r+', encoding= 'UTF-8') as data:
     res = data.read()
     print(res)
         
-            
-    
-
-
-
-# def add_into_file():
-#     data = open(path, 'a', encoding='UTF-8')
-#     name = input("Введите имя: ").capitalize()
-#     surname = input("Введите фамилию: ").capitalize()
-#     mid_name = input("Введите отчество: ").capitalize()
-#     phone = input("Введите норме телефона: ")
-#     data.write(f"{name} {mid_name} {surname} {phone}")
-#     data.close()
-    
-# def reading_file():
-#     data = open(path, 'r', encoding='UTF-8')
-#     print(data.read())
-#     print(data.readlines())
-#     data.close()
-    
-# def find_contact_file():
-#     data = open(path, 'r', encoding='UTF-8')
-#     find_contact = input('Введите искомый параметр: ')
-#     in_find_text = data.readlines()
-#     dict_cont = {}
-#     for i, j in enumerate(in_find_text, 1):
-#         j = j.strip()
-#         dict_cont = {'name': in_find_text[0], 'mid_name': in_find_text[1], 'surname': in_find_text[2], 'phone': in_find_text[3]}
-#     for i in in_find_text:
-#         if i == find_contact:
-#             print('123')
