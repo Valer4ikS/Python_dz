@@ -59,7 +59,7 @@ def main_menu():
     print('3 - очистить книгу')
     print('4 - найти контакт')
     # print('5 - изменить контакт')
-    # print('6 - удалить контакт')
+    print('6 - удалить контакт')
     while True:
         menu = int(input('Действие: '))
         
@@ -71,7 +71,8 @@ def main_menu():
             clear_all()
         elif menu == 4:
             find_contact()
-        # elif menu == 5:
+        elif menu == 6:
+            delete()
             
             
 main_menu()
